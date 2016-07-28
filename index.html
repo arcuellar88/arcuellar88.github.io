@@ -9,7 +9,7 @@ body {background-color: #121f3d;}
         src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
         <script type="text/javascript">
         function initViz() {
-            if(screen.width>320 && screen.width<763)
+            if(screen.width<763)
             {
                 var containerDiv = document.getElementById("vizContainer"),
                 url = "https://public.tableau.com/views/IDBKnowledgeAnalyticsPhone/KnowledgeAnalytics?:embed=y&:display_count=yes",
@@ -22,7 +22,7 @@ body {background-color: #121f3d;}
                 containerDiv.setAttribute("style","width:379px");
             
             }
-            else if(screen.width>763 && screen.width<999)
+            else if(screen.width<999)
             {
                 var containerDiv = document.getElementById("vizContainer"),
                 url = "https://public.tableau.com/views/IDBKnowledgeAnalyticsTablet/KnowledgeAnalytics?:embed=y&:display_count=yes",
