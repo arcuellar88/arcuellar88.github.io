@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
+ <title>Knowledge Analytics</title>
+<style>
+body {background-color: #121f3d;}
+@media only screen and (min-width : 320px) and (max-width : 763px) 
+{
+.tablet, .desktop 
+{display: none;}
+}
 
+@media only screen and (min-width : 764px) and (max-width : 999px) 
+{
+.phone, .desktop {display: none;}
+}
+
+@media only screen and (min-width : 1000px) 
+{
+.phone, .tablet {display: none;}
+}
+</style>
 <head>
-    <title>Basic Embed</title>
+   
     
     <script type="text/javascript" 
 	    src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
@@ -20,11 +38,47 @@
             var viz = new tableau.Viz(containerDiv, url, options); 
             // Create a viz object and embed it in the container div.
         }
+
+        function initVizM() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/IDBKnowledgeAnalyticsPhone/KnowledgeAnalytics?:embed=y&:display_count=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+            
+            var viz = new tableau.Viz(containerDiv, url, options); 
+            // Create a viz object and embed it in the container div.
+        }
+        function initVizT() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/IDBKnowledgeAnalyticsPhone/KnowledgeAnalytics?:embed=y&:display_count=yes",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+            
+            var viz = new tableau.Viz(containerDiv, url, options); 
+            // Create a viz object and embed it in the container div.
+        }
+
     </script>
 </head>
 
-<body onload="initViz();">
-    <div id="vizContainer" style="width:800px; height:700px;"></div>    
+<body>
+    <div class="desktop" onload="initViz();">
+    <div id="vizContainer" style="width:1004px; height:3569px;"></div> 
+    </div> 
+    <div class="phone" onload="initVizM();">
+    <div id="vizContainer" style="width:379px; height:3569px;"></div> 
+    </div>  
+    <div class="tablet" onload="initVizT();">
+    <div id="vizContainer" style="width:764px; height:3569px;"></div> 
+    </div>    
 </body>
 
 </html>
