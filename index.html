@@ -5,10 +5,7 @@
 body {background-color: #121f3d;}
 </style>
 <head>
-</head>
-<body>
-    <center>
-         <script type="text/javascript" 
+       <script type="text/javascript" 
         src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
         <script type="text/javascript">
         function initViz() {
@@ -49,9 +46,11 @@ body {background-color: #121f3d;}
             var viz = new tableau.Viz(containerDiv, url, options); 
             // Create a viz object and embed it in the container div.
         }
-        initViz();
     </script>
-    <div id="vizContainer" style="width:1004px; height:3569px;"></div>
+</head>
+<body onload="initViz();">
+    <center>
+    <div id="vizContainer"></div>
 </center>
 </body>
 
