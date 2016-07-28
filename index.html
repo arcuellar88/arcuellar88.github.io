@@ -15,6 +15,9 @@ body {background-color: #121f3d;}
                 url = "https://public.tableau.com/views/IDBKnowledgeAnalyticsPhone/KnowledgeAnalytics?:embed=y&:display_count=yes",
                 options = {
                     hideTabs: true,
+                    hideToolbar: true,
+                    width: placeholderDiv.offsetWidth,
+                     height: placeholderDiv.offsetHeight,
                     onFirstInteractive: function () {
                         console.log("Run this code when the viz has finished loading.");
                     }
