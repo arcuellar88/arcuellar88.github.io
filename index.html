@@ -17,11 +17,14 @@ body {background-color: #121f3d;}
                     hideTabs: true,
                     hideToolbar: true,
                     width: screen.width,
+                    height:3569,
                     onFirstInteractive: function () {
+                          workbook = viz.getWorkbook();
+                          activeSheet = workbook.getActiveSheet();
                         console.log("Run this code when the viz has finished loading.");
                     }
                 };
-              containerDiv.setAttribute("style","border:none");
+             
             }
             else if(screen.width<999)
             {
@@ -56,7 +59,7 @@ body {background-color: #121f3d;}
 <body onload="initViz();">
 
     <center>                
-     <div id="vizContainer" style="width:100%; height:3569px;"></div>
+     <div id="vizContainer"></div>
     </center>
 
 </body>
