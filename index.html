@@ -19,6 +19,7 @@ body {background-color: #121f3d;}
                         console.log("Run this code when the viz has finished loading.");
                     }
                 };
+                containerDiv.setAttribute("style","width:379px");
             
             }
             else if(screen.width>763 && screen.width<999)
@@ -31,6 +32,7 @@ body {background-color: #121f3d;}
                         console.log("Run this code when the viz has finished loading.");
                     }
                 };
+                containerDiv.setAttribute("style","width:764px");
             }
             else
             {
@@ -42,16 +44,18 @@ body {background-color: #121f3d;}
                         console.log("Run this code when the viz has finished loading.");
                     }
                 };
+                containerDiv.setAttribute("style","width:1004px");
             }
             var viz = new tableau.Viz(containerDiv, url, options); 
+
             // Create a viz object and embed it in the container div.
         }
     </script>
 </head>
 <body onload="initViz();">
     <center>
-    <div id="vizContainer"></div>
-</center>
+     <div id="vizContainer"></div>
+    </center>
 </body>
 
 </html>
